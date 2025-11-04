@@ -49,6 +49,25 @@ fi
 # export PROMPT_COMMAND='__git_ps1 "\w" "\[\e[0m\]\[\e[1;36m\] $ \[\e[0m\]"'
 
 ###############################################################################
+# Fix hidden cursor
+###############################################################################
+
+autoload -Uz add-zsh-hook
+_first_prompt_done=0
+_fix_hidden_cursor() {
+  if [[ $_first_prompt_done -eq 0 ]]; then
+    _first_prompt_done=1
+    return
+  fi
+  command -v tput >/dev/null && tput cnorm 2>/dev/null
+  printf '\e[?25h'
+}
+add-zsh-hook precmd _fix_hidden_cursor   # before each prompt draw
+TRAPINT()  { _fix_hidden_cursor }        # if you ^C something
+TRAPTERM() { _fix_hidden_cursor }
+alias cur=_fix_hidden_cursor
+
+###############################################################################
 # direnv
 ###############################################################################
 
