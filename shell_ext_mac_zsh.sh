@@ -65,7 +65,6 @@ _fix_hidden_cursor() {
 add-zsh-hook precmd _fix_hidden_cursor   # before each prompt draw
 TRAPINT()  { _fix_hidden_cursor }        # if you ^C something
 TRAPTERM() { _fix_hidden_cursor }
-alias cur=_fix_hidden_cursor
 
 ###############################################################################
 # direnv
