@@ -39,7 +39,6 @@ pkief.material-icon-theme
 prisma.prisma
 redhat.vscode-xml
 rust-lang.rust-analyzer
-saoudrizwan.claude-dev
 sdras.night-owl
 shopify.ruby-lsp
 simonsiefke.svg-preview
