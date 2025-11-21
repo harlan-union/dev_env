@@ -32,7 +32,6 @@ To set up p10k prompt:
     ln -s .dev_env/.p10k.zsh
 
 To set up vscode or cursor or windsurf settings:
-
     cd ~/Library/Application\ Support/Code/User
     # OR if Cursor:
     cd ~/Library/Application\ Support/Cursor/User

@@ -27,6 +27,11 @@
   {
     "key": "alt+cmd+k",
     "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
   },
   {
     "key": "cmd+escape",

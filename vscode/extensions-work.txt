@@ -1,0 +1,9 @@
+anthropic.claude-code
+artdiniz.quitcontrol-vscode
+digitalbrainstem.javascript-ejs-support
+esbenp.prettier-vscode
+ms-python.python
+prisma.prisma
+sdras.night-owl
+streetsidesoftware.code-spell-checker
+tamasfe.even-better-toml

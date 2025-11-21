@@ -194,18 +194,23 @@ alias ss='spring stop'
 #   alias claude="${HOME}/.claude/local/claude"
 # fi
 
-alias cl='brew upgrade --cask claude-code ; claude update && claude --ide --dangerously-skip-permissions'
+alias cl='(brew list --cask claude-code &>/dev/null && brew upgrade --cask claude-code) ; claude update && claude --ide --dangerously-skip-permissions'
 
 ###############################################################################
 # Codex
 ###############################################################################
+# NPM HAS THE LATEST VERSIONS, NOT BREW!!
+###############################################################################
 
-alias cx='(set -x && HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade --cask codex) && codex --sandbox danger-full-access --ask-for-approval never'
+alias codex-install='(set -x && npm install -g @openai/codex && npm update -g @openai/codex)'
+alias cx='codex-install && codex --sandbox danger-full-access --ask-for-approval never'
 # cxd means "codex dangerous":
-alias cxd='(set -x && HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade --cask codex) && codex --dangerously-bypass-approvals-and-sandbox'
+alias cxd='codex-install && codex --dangerously-bypass-approvals-and-sandbox'
 
 ###############################################################################
 # Gemini CLI
 ###############################################################################
+# NPM HAS THE LATEST VERSIONS, NOT BREW!!
+###############################################################################
 
-alias gi='npm install -g @google/gemini-cli && gemini --yolo'
+alias gi='npm update -g @google/gemini-cli && gemini --yolo --model pro'
