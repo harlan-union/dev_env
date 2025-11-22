@@ -194,7 +194,7 @@ alias ss='spring stop'
 #   alias claude="${HOME}/.claude/local/claude"
 # fi
 
-alias cl='brew upgrade --cask claude-code ; claude update && claude --ide --dangerously-skip-permissions'
+alias cl='HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade --cask claude-code ; claude update && claude --ide --dangerously-skip-permissions'
 
 ###############################################################################
 # Codex
