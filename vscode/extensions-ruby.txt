@@ -1,0 +1,7 @@
+anthropic.claude-code
+castwide.solargraph
+openai.chatgpt
+rubocop.vscode-rubocop
+sdras.night-owl
+svelte.svelte-vscode
+vortizhe.simple-ruby-erb

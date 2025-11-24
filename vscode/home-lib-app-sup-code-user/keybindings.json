@@ -1,6 +1,5 @@
 // Place your key bindings in this file to overwrite the defaults
-[
-  {
+[ {
     "key": "ctrl+shift+alt+right",
     "command": "workbench.action.splitEditorRight",
     "when": "editorTextFocus"
@@ -26,6 +25,11 @@
   },
   {
     "key": "alt+cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k",
     "command": "workbench.action.terminal.clear",
   },
   {
@@ -54,5 +58,9 @@
     "key": "alt+\\",
     "command": "-editor.action.inlineSuggest.trigger",
     "when": "editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "chatgpt.sidebarView.focus"
   }
 ]

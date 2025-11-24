@@ -1,4 +1,6 @@
 alexkrechik.cucumberautocomplete
+aliariff.vscode-erb-beautify
+anysphere.cursorpyright
 anysphere.pyright
 artdiniz.quitcontrol-vscode
 bbenoist.nix
@@ -6,7 +8,9 @@ bierner.color-info
 bradlc.vscode-tailwindcss
 castwide.solargraph
 codeium.codeium
+craigmaslowski.erb
 denoland.vscode-deno
+elia.erb-formatter
 esbenp.prettier-vscode
 feego.night-owl-light-bold-more-contrast
 github.codespaces
