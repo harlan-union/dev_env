@@ -214,7 +214,6 @@
     "plantuml.render": "PlantUMLServer",
     "workbench.editor.showTabs": "multiple",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "workbench.colorTheme": "Night Owl (No Italics)",
     "editor.unicodeHighlight.invisibleCharacters": false,
     "extensions.ignoreRecommendations": true,
     "remote.SSH.defaultExtensions": [
@@ -279,5 +278,8 @@
             "icon": "terminal-powershell"
         }
     },
-    "cSpell.diagnosticLevel": "Hint"
+    "cSpell.diagnosticLevel": "Hint",
+    "security.promptForLocalFileProtocolHandling": false,
+    "git.blame.editorDecoration.enabled": true,
+    "workbench.colorTheme": "Night Owl Light (No Italics)"
 }

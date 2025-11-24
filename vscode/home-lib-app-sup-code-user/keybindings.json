@@ -1,5 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
-[ {
+[
+  {
     "key": "ctrl+shift+alt+right",
     "command": "workbench.action.splitEditorRight",
     "when": "editorTextFocus"
@@ -62,5 +63,13 @@
   {
     "key": "shift+cmd+c",
     "command": "chatgpt.sidebarView.focus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
   }
 ]
