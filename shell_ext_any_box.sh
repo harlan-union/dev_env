@@ -194,7 +194,9 @@ alias ss='spring stop'
 #   alias claude="${HOME}/.claude/local/claude"
 # fi
 
-alias cl='HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade --cask claude-code ; claude update && claude --ide --dangerously-skip-permissions'
+# npm install -g @anthropic-ai/claude-code
+alias claude-install='curl -fsSL https://claude.ai/install.sh | bash'
+alias cl='command -v claude >/dev/null || claude-install; claude update && claude --ide --dangerously-skip-permissions'
 
 ###############################################################################
 # Codex

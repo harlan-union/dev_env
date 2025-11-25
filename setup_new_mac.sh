@@ -109,6 +109,3 @@ brew install supabase/tap/supabase
 # java
 brew install java
 brew install maven
-
-brew install --cask codex
-brew install --cask claude-code
