@@ -32,19 +32,23 @@ To set up p10k prompt:
     ln -s .dev_env/.p10k.zsh
 
 To set up vscode or cursor or windsurf settings:
-    cd ~/Library/Application\ Support/Code/User
-    # OR if Cursor:
-    cd ~/Library/Application\ Support/Cursor/User
-    # OR if Windsurf:
-    cd ~/Library/Application\ Support/Windsurf/User
-    # OR if Antigravity:
-    cd ~/Library/Application\ Support/Antigravity/User
 
-    ln -sf ~/.dev_env/vscode/home-lib-app-sup-code-user/settings.json
-    ln -sf ~/.dev_env/vscode/home-lib-app-sup-code-user/keybindings.json
+```sh
+cd ~/Library/Application\ Support/Code/User
+# OR if Cursor:
+cd ~/Library/Application\ Support/Cursor/User
+# OR if Windsurf:
+cd ~/Library/Application\ Support/Windsurf/User
+# OR if Antigravity:
+cd ~/Library/Application\ Support/Antigravity/User
+
+ln -sf ~/.dev_env/vscode/home-lib-app-sup-code-user/settings.json
+ln -sf ~/.dev_env/vscode/home-lib-app-sup-code-user/keybindings.json
+```
 
 To back up vscode extensions:
-```console
+
+```sh
 cd ~/.dev_env
 code --list-extensions >> vscode/extensions.txt
 ```

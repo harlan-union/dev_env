@@ -195,8 +195,11 @@ if [ $OSTYPE != 'linux-gnu' ]; then
   if command -v code &>/dev/null && ! alias code &>/dev/null 2>&1; then
     export EDITOR='code'
   else
+    # if cursor is installed, use it as editor
+    if command -v cursor &>/dev/null; then
+      export EDITOR='cursor'
     # if windsurf is installed, use it as editor
-    if command -v windsurf &>/dev/null; then
+    elif command -v windsurf &>/dev/null; then
       export EDITOR='windsurf'
     else
       # otherwise use nano
