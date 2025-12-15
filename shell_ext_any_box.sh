@@ -214,7 +214,7 @@ cl() {
   fi
   rm -rf "$(npm root -g)/@anthropic-ai/.claude-code-"*
   npm install -g @anthropic-ai/claude-code@latest
-  stayon
+  awake
   claude --ide --dangerously-skip-permissions "$@"
 }
 
