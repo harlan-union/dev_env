@@ -187,6 +187,14 @@ alias work='r jobs:work'
 alias ss='spring stop'
 
 ###############################################################################
+# random
+###############################################################################
+
+if [[ $(uname -s) == 'Darwin' ]]; then
+  alias awake='killall caffeinate ; caffeinate -dimsu -t 28800 &' # stay awake for 8 hrs
+fi
+
+###############################################################################
 # Claude Code
 ###############################################################################
 
@@ -195,11 +203,23 @@ alias ss='spring stop'
 # fi
 
 # npm install -g @anthropic-ai/claude-code
-alias claude-install='curl -fsSL https://claude.ai/install.sh | bash'
-alias cl='command -v claude >/dev/null || claude-install; claude update && claude --ide --dangerously-skip-permissions'
+# alias claude-install='curl -fsSL https://claude.ai/install.sh | bash'
+# alias claude-install='npm install -g @anthropic-ai/claude-code'
+# alias claude-upsert='rm -rf "$(npm root -g)/@anthropic-ai/.claude-code-"*; npm install -g @anthropic-ai/claude-code'
+cl() {
+  set -x
+  if [ "$(which -a claude | uniq | wc -l)" -gt 1 ]; then
+    echo "Multiple claude installations found. Aborting."
+    return 1
+  fi
+  rm -rf "$(npm root -g)/@anthropic-ai/.claude-code-"*
+  npm install -g @anthropic-ai/claude-code@latest
+  stayon
+  claude --ide --dangerously-skip-permissions "$@"
+}
 
-alias cc='claude --dangerously-skip-permissions --model haiku --print "commit the staged changes ONLY with a good commit message, check CLAUDE.md for instructions"'
-alias cca='claude --dangerously-skip-permissions --model haiku --print "commit ALL changes with a good commit message, check CLAUDE.md for instructions"'
+alias ccs='claude --dangerously-skip-permissions --model haiku --print "commit the staged changes ONLY with a good commit message, check CLAUDE.md for instructions. Make sure your comment reflects the changes that were made, not the resulting state of the changed files."'
+alias cca='claude --dangerously-skip-permissions --model haiku --print "commit ALL changes with a good commit message, check CLAUDE.md for instructions. Make sure your comment reflects the changes that were made, not the resulting state of the changed files."'
 
 ###############################################################################
 # Codex
