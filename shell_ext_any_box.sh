@@ -198,8 +198,9 @@ alias ss='spring stop'
 alias claude-install='curl -fsSL https://claude.ai/install.sh | bash'
 alias cl='command -v claude >/dev/null || claude-install; claude update && claude --ide --dangerously-skip-permissions'
 
-alias cc='claude --dangerously-skip-permissions --model haiku --print "commit the staged changes ONLY with a good commit message, check CLAUDE.md for instructions"'
+alias ccs='claude --dangerously-skip-permissions --model haiku --print "commit the staged changes ONLY with a good commit message, check CLAUDE.md for instructions"'
 alias cca='claude --dangerously-skip-permissions --model haiku --print "commit ALL changes with a good commit message, check CLAUDE.md for instructions"'
+alias cpr='claude --dangerously-skip-permissions --model haiku --print "Update the PR description corresponding to the current branch.  IGNORE INDIVIDUAL COMMITS AND DIFF the branch AGAINST origin/main.  Make it concise but informative.  Use markdown formatting.  Use the `gh` CLI to update the PR description."'
 
 ###############################################################################
 # Codex
