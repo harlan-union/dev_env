@@ -38,6 +38,7 @@ delrem = push origin --delete # delete remote branch
 # df = diff --ignore-all-space --find-renames ':(exclude)pnpm-lock.yaml' ':(exclude)yarn.lock' ':(exclude)package-lock.json'
 df = diff --ignore-all-space --find-renames
 dfw = diff --ignore-all-space --find-renames ':(exclude)pnpm-lock.yaml' ':(exclude)yarn.lock' ':(exclude)package-lock.json'
+diff-main = diff -U300 origin/main HEAD
 ds = diff --ignore-all-space --find-renames --staged ':(exclude)pnpm-lock.yaml' ':(exclude)yarn.lock' ':(exclude)package-lock.json'
 dv = diff --ignore-all-space --find-renames --unified=50 ':(exclude)pnpm-lock.yaml' ':(exclude)yarn.lock' ':(exclude)package-lock.json' # note: --unified=<number of lines of context around diff>
 ft = fetch
